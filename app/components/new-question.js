@@ -8,13 +8,11 @@ export default Ember.Component.extend({
     },
     save1() {
       var params = {
-        author: this.get('author'),
-        question: this.get('question'),
-        type: this.get('type'),
-        image: this.get('image'),
-        bedrooms: this.get('bedrooms'),
+        author: this.get('author') ? this.get('author'): "",
+        question: this.get('question') ? this.get('question'): "",
+        notes: this.get('notes') ? this.get('notes'): "",
       };
-      this.set('addNewRental', false);
+      this.set('addNewQuestion', false);
       this.sendAction('save2', params);
     }
   }
