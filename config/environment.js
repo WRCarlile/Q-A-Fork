@@ -4,19 +4,25 @@ module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'q-and-a',
     environment: environment,
-    baseURL: '/',
-    locationType: 'auto',
-    EmberENV: {
-      FEATURES: {
-        // Here you can enable experimental features on an ember canary build
-        // e.g. 'with-controller': true
-      }
-    },
+    firebase:  {
+        apiKey: "AIzaSyDtM7t9JG-FZCtPGnnz1cjRRDF6AQp_KDg",
+        authDomain: "q-an-a-rc-ember.firebaseapp.com",
+        databaseURL: "https://q-an-a-rc-ember.firebaseio.com",
+        storageBucket: "",
+      },
+      baseURL: '/',
+      locationType: 'auto',
+      EmberENV: {
+        FEATURES: {
+          // Here you can enable experimental features on an ember canary build
+          // e.g. 'with-controller': true
+        }
+      },
 
-    APP: {
-      // Here you can pass flags/options to your application instance
-      // when it is created
-    }
+      APP: {
+        // Here you can pass flags/options to your application instance
+        // when it is created
+      }
   };
 
   if (environment === 'development') {
