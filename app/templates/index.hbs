@@ -1,1 +1,7 @@
-{{outlet}}
+<h1> Q&A </h1>
+
+<ul>
+  {{#each model as |question|}}
+     {{question-tile question=question}}
+  {{/each}}
+</ul>
