@@ -2,14 +2,14 @@
 
 module.exports = function(environment) {
   var ENV = {
-    modulePrefix: 'q-and-a',
-    environment: environment,
     firebase:  {
         apiKey: "AIzaSyDtM7t9JG-FZCtPGnnz1cjRRDF6AQp_KDg",
         authDomain: "q-an-a-rc-ember.firebaseapp.com",
         databaseURL: "https://q-an-a-rc-ember.firebaseio.com",
         storageBucket: "",
       },
+      modulePrefix: 'q-and-a',
+      environment: environment,
       baseURL: '/',
       locationType: 'auto',
       EmberENV: {
