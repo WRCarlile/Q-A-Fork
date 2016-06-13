@@ -1,7 +1,7 @@
-<h2>{{question.author}} {{question.notes}}</h2>
+<h2>{{model.author}} {{model.text}} {{model.notes}}</h2>
 
 {{update-question question=model update="update"}}
 
-{{new-answer saveAnswer2="saveAnswer3" question=model}}
-
 {{question-detail question=model destroyQuestion="destroyQuestion"}}
+
+{{new-answer saveAnswer2="saveAnswer3" question=model}}
