@@ -1,12 +1,9 @@
 <h1> Q and A </h1>
 
 <ul>
-  {{#each model as |question|}}
-
-     {{question-tile question=question}}
-
+  {{#each model.questions as |question|}}
+    {{question-tile question=question }}
   {{/each}}
 
-  {{new-question save2="save3"}}
-
 </ul>
+{{new-question save2="save3"}}

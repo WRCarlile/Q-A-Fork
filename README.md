@@ -1,7 +1,6 @@
-# Q-and-a
+# Questions and Answers
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+An Ember JS application that manages a question and answer forum.
 
 ## Prerequisites
 
@@ -51,3 +50,8 @@ Specify what it takes to deploy your app.
   * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
   * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
 
+  ### License
+
+  *MIT License*
+
+  Copyright (c) 2016 **_Ryan Carlile_**
