@@ -1,10 +1,12 @@
-<h2>{{question.author}} {{question.text}} {{question.notes}}</h2>
+<h2>{{question.text}} {{question.author}} {{question.notes}}</h2>
 <br>
 <ul>
-	{{#each question.answers as |answer|}}
+	{{#each questions.answers as |answer|}}
 		<li>{{answer.reply}}
-		{{answer.author}}</li>
+		{{answer.author2}}</li>
 	{{/each}}
 </ul>
+
+
 
 <button {{action 'delete' question}}>Delete</button>

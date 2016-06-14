@@ -2,8 +2,8 @@
 
 <ul>
   {{#each model.questions as |question|}}
-    {{question-tile question=question }}
+    {{#link-to 'question' question.id}} {{question.text}}'s {{question.author}} {{question.notes}} {{/link-to}}<br>
   {{/each}}
 
 </ul>
-{{new-question save2="save3"}}
+{{new-question saveQuestion="saveQuestion"}}

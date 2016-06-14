@@ -3,8 +3,8 @@
   <div>
     <form>
       <div class="form-group">
-        <label for="author">Author</label>
-        {{input value=author id="author"}}
+        <label for="author2">Author</label>
+        {{input value=author2 id="author2"}}
       </div>
 
       <div class="form-group">
@@ -12,9 +12,9 @@
         {{input value=reply id="reply"}}
       </div>
 
-      <button {{action 'saveAnswer1'}}>Save</button>
+      <button {{action 'save1'}}>Save</button>
     </form>
   </div>
 {{else}}
-  <button {{action 'answerFormShow'}}>New Question</button>
+  <button {{action 'answerFormShow'}}>New Answer</button>
 {{/if}}
