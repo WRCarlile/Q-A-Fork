@@ -1,7 +1,7 @@
 <h2>{{question.text}} {{question.author}} {{question.notes}}</h2>
 <br>
 <ul>
-	{{#each questions.answers as |answer|}}
+	{{#each question.answers as |answer|}}
 		<li>{{answer.reply}}
 		{{answer.author2}}</li>
 	{{/each}}
