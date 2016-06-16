@@ -2,8 +2,8 @@
 
 <ul>
   {{#each model.questions as |question|}}
-    {{#link-to 'question' question.id}} {{question.text}} {{/link-to}}<br>
+    {{#link-to 'question' question.id}} {{question.text}} {{/link-to}}
+    <br>
   {{/each}}
-
 </ul>
-{{new-question saveQuestion="saveQuestion"}}
+<br> {{new-question saveQuestion="saveQuestion"}}
