@@ -1,8 +1,9 @@
-<h2>{{question.text}} {{question.author}} {{question.notes}}</h2>
+<h2>{{question.text}} </h2> <h4>Author: {{question.author}}</h4> <p>Notes: {{question.notes}}</p>
 <br>
+<h4>Answers:</h4>
 <ul>
 	{{#each question.answers as |answer|}}
-		<li>{{answer.reply}}
+		<li> {{answer.reply}}<br>  -
 		{{answer.author2}}</li>
 	{{/each}}
 </ul>

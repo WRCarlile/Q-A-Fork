@@ -2,7 +2,7 @@
 
 <ul>
   {{#each model.questions as |question|}}
-    {{#link-to 'question' question.id}} {{question.text}}'s {{question.author}} {{question.notes}} {{/link-to}}<br>
+    {{#link-to 'question' question.id}} {{question.text}} {{/link-to}}<br>
   {{/each}}
 
 </ul>
