@@ -1,16 +1,14 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
-  thumbUpToggle: false,
-  thumbDownToggle: false,
+  thumbToggle: false,
 
   actions: {
 		thumbUp: function() {
-			this.set('thumbUpToggle', true);
-
+			this.set('thumbToggle', true);
     },
     thumbDown: function() {
-      this.set('thumbDownToggle', true);
+      this.set('thumbToggle', false);
     },
 
     delete(question) {
