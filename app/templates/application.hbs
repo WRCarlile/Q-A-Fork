@@ -1,12 +1,12 @@
-<div class="container">
-  <header class="jumbotron">
-    <h1>Q & A</h1>
-  </header>
-  {{outlet}}
-  <br>
-  <br>
-  <hr>
-  <footer>
-    {{#link-to 'index'}} Home {{/link-to}}
-  </footer>
-</div>
+<nav>
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo">Q&A</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="">Home</a></li>
+      </ul>
+    </div>
+  </nav>
+{{outlet}}
+
+{{!-- ember-cli-materialize modal container --}}
+{{md-modal-container}}
