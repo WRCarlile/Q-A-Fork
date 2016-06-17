@@ -1,12 +1,19 @@
-<h2>{{question.text}} </h2> <h4>Author: {{question.author}}</h4> <p>Notes: {{question.notes}}</p>
+<h2>{{question.text}} </h2>
+<h4>Author: {{question.author}}</h4>
+<p>Notes: {{question.notes}}</p>
 <p>Price: {{icon question}} </p>
 <p>Lowest Item on the menu: $ {{question.price}}</p>
 <br>
-<h4>Answers:</h4>
+<h4 class="">Answers:</h4>
 <ul>
 	{{#each question.answers as |answer|}}
-		<li> {{answer.reply}}<br>  -
-		{{answer.author2}}</li>
+		<li class=""> {{answer.reply}}
+			<br>
+			{{answer.author2}}
+			<br>
+			<a {{action 'thumbUp'}} class="btn-floating btn-large waves-effect waves-light blue"><i class="material-icons">thumb_up</i></a>
+			<a {{action 'thumbDown'}} class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">thumb_down</i></a>
+		</li>
 	{{/each}}
 </ul>
 
