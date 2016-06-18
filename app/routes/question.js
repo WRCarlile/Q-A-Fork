@@ -25,10 +25,8 @@ export default Ember.Route.extend({
     },
 
     thumbUp(answer){
-      this.incrementProperty('thumbCount', 1);
-        console.log(this.thumbCount);
+      answer.incrementProperty('thumbCount', 1);
       answer.save();
-      console.log(answer.this.thumbCount);
       this.transitionTo('question');
     },
 
