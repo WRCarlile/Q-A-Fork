@@ -2,7 +2,10 @@ import Ember from 'ember';
 
 export default Ember.Component.extend({
   thumbToggle: false,
-	// thumbCount: 0,
+	thumbCount: 0,
+
+	sortBy: ['thumbCount:desc'],
+	thumbAmount: Ember.computed.sort('question.answers', 'sortBy'),
 
   actions: {
 		thumbUp(answer) {

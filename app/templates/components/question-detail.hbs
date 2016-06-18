@@ -6,21 +6,18 @@
 <br>
 <h4 class="">Answers:</h4>
 <ul>
-	{{#each question.answers as |answer|}}
+	{{#each thumbAmount as |answer|}}
 		<li class=""> {{answer.reply}}
 			<br>
 			{{answer.author2}}
 			<br>
 			{{answer.thumbCount}}
 			<br>
-			<br>
 			<a {{action 'thumbUp' answer}} class="btn-floating btn-large waves-effect waves-light blue"><i class="material-icons">thumb_up</i></a>
 			<!-- <a {{action 'thumbDown'answer}} class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">thumb_down</i></a> -->
 		</li>
 	{{/each}}
 </ul>
-
-
 
 
 <button {{action 'delete' question}}>Delete</button>
