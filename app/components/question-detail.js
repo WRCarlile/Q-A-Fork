@@ -6,6 +6,7 @@ export default Ember.Component.extend({
 
 	sortBy: ['thumbCount:desc'],
 	thumbAmount: Ember.computed.sort('question.answers', 'sortBy'),
+	favoriteList: Ember.inject.service(),
 
   actions: {
 		thumbUp(answer) {
@@ -17,6 +18,11 @@ export default Ember.Component.extend({
     // thumbDown: function() {
     //   this.set('thumbToggle', false);
     // },
+
+		favorite(favorites) {
+			this.get('favoriteList').add(favorites);
+		},
+
     delete(question) {
       if (confirm('Are you sure you want to delete this question?')) {
         this.sendAction('destroyQuestion', question);
