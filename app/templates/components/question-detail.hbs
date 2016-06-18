@@ -11,12 +11,16 @@
 			<br>
 			{{answer.author2}}
 			<br>
-			<a {{action 'thumbUp'}} class="btn-floating btn-large waves-effect waves-light blue"><i class="material-icons">thumb_up</i></a>
-			<a {{action 'thumbDown'}} class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">thumb_down</i></a>
+			{{answer.thumbCount}}
+			<br>
+			<br>
+			<a {{action 'thumbUp' answer}} class="btn-floating btn-large waves-effect waves-light blue"><i class="material-icons">thumb_up</i></a>
+			<!-- <a {{action 'thumbDown'answer}} class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">thumb_down</i></a> -->
 		</li>
 	{{/each}}
 </ul>
-{{log thumbToggle}}
+
+
 
 
 <button {{action 'delete' question}}>Delete</button>

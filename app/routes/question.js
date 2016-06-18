@@ -24,6 +24,14 @@ export default Ember.Route.extend({
       this.transitionTo('question');
     },
 
+    thumbUp(answer){
+      this.incrementProperty('thumbCount', 1);
+        console.log(this.thumbCount);
+      answer.save();
+      console.log(answer.this.thumbCount);
+      this.transitionTo('question');
+    },
+
     destroyQuestion(question) {
       var question_deletions = question.get('answers').map(function(answer) {
         return answer.destroyRecord();
