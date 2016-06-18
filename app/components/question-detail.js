@@ -19,8 +19,8 @@ export default Ember.Component.extend({
     //   this.set('thumbToggle', false);
     // },
 
-		favorite(favorites) {
-			this.get('favoriteList').add(favorites);
+		favorite(item) {
+			this.get('favoriteList').add(item);
 		},
 
     delete(question) {
