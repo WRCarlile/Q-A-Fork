@@ -3,13 +3,11 @@
 <ul>
   {{#each model.questions as |question|}}
     {{question-tile question=question}}
-    	<button {{action 'favorite' question}}>Add to Favorites List</button>
-    <br>
   {{/each}}
 </ul>
 
 <h5>Favorite List</h5>
-
+{{log display-list}}
 {{display-list question=model}}
 <br>
 {{new-question saveQuestion="saveQuestion"}}
