@@ -1,7 +1,5 @@
-
-
 <li>
-	{{#link-to 'question' question.id}}	 {{question.text}}  {{/link-to}}
-	<button {{action 'favorite' question}}>Add to Favorites List</button>
-<br>
+	{{#link-to 'question' question.id}} {{question.text}} {{/link-to}}
+	<a {{action 'favorite' question}} class="btn-floating btn-tiny waves-effect waves-light "><i class="material-icons">add</i></a>
+	<br>
 </li>

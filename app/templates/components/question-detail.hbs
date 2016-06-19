@@ -1,23 +1,26 @@
-<h2>{{question.text}} </h2>
-<h4>Author: {{question.author}}</h4>
-<p>Notes: {{question.notes}}</p>
-<p>Price: {{icon question}} </p>
-<p>Lowest Item on the menu: $ {{question.price}}</p>
-<br>
+<div class="card-panel teal white-text">
+	<h2>{{question.text}} </h2>
+	<h4>Author: {{question.author}}</h4>
+	<p>Notes: {{question.notes}}</p>
+	<p>Price: {{icon question}} </p>
+	<p>Lowest Item on the menu: $ {{question.price}}</p>
+</div>
 <h4 class="">Answers:</h4>
-<ul>
-	{{#each thumbAmount as |answer|}}
-		<li class=""> {{answer.reply}}
-			<br>
-			{{answer.author2}}
-			<br>
-			{{answer.thumbCount}}
-			<br>
-			<a {{action 'thumbUp' answer}} class="btn-floating btn-large waves-effect waves-light blue"><i class="material-icons">thumb_up</i></a>
-			<!-- <a {{action 'thumbDown'answer}} class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">thumb_down</i></a> -->
-
-		</li>
-	{{/each}}
-</ul>
-
-<button {{action 'delete' question}}>Delete</button>
+<div class="row">
+	<ul>
+		{{#each thumbAmount as |answer|}}
+			<div class="col s4">
+				<div class="card-panel teal white-text">
+					<li> {{answer.reply}}
+						<br> {{answer.author2}}
+						<br> {{answer.thumbCount}}
+						<br>
+						<a {{action 'thumbUp' answer}} class="btn-floating btn-tiny waves-effect waves-light blue"><i class="material-icons">thumb_up</i></a>
+						<!-- <a {{action 'thumbDown'answer}} class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">thumb_down</i></a> -->
+					</li>
+				</div>
+			</div>
+		{{/each}}
+	</ul>
+</div>
+<button class="waves-effect waves-light btn" {{action 'delete' question}}>Delete</button>

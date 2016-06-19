@@ -1,13 +1,21 @@
 <h1> Questions: </h1>
-
-<ul>
-  {{#each model.questions as |question|}}
-    {{question-tile question=question}}
-  {{/each}}
-</ul>
-
-<h5>Favorite List</h5>
-{{log display-list}}
-{{display-list question=model}}
-<br>
-{{new-question saveQuestion="saveQuestion"}}
+<div class="row">
+  <div class="col s9">
+    <ul>
+      {{#each model.questions as |question|}}
+        <div class="col s12 m5">
+          <div class="card-panel teal">
+            {{question-tile question=question}}
+          </div>
+        </div>
+      {{/each}}
+    </ul>
+    <br>
+    <div class="center col s12">
+      {{new-question saveQuestion="saveQuestion"}}
+    </div>
+  </div>
+  <div class="col s3 ">
+    <h5>Favorite's List</h5> {{display-list question=model}}
+  </div>
+</div>

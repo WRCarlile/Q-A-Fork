@@ -1,12 +1,13 @@
 <nav>
-    <div class="nav-wrapper">
-      <a href="#" class="brand-logo">Q&A</a>
-      <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li><a href="">Home</a></li>
-      </ul>
-    </div>
-  </nav>
-{{outlet}}
-
+  <div class="nav-wrapper">
+    {{#link-to "index"}}<a class="center brand-logo">Q&A</a>{{/link-to}}
+    <ul id="nav-mobile" class="right hide-on-med-and-down">
+      <li>{{#link-to "index"}}<a>Home</a>{{/link-to}}</li>
+    </ul>
+  </div>
+</nav>
+<div class="container">
+  {{outlet}}
+</div>
 {{!-- ember-cli-materialize modal container --}}
 {{md-modal-container}}

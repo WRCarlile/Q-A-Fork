@@ -11,7 +11,6 @@ export default Ember.Component.extend({
   actions: {
 		thumbUp(answer) {
 		this.incrementProperty('thumbCount', 1);
-		console.log(this.thumbCount);
 		this.sendAction('thumbUp', answer);
     },
 

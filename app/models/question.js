@@ -5,5 +5,10 @@ export default DS.Model.extend({
     text: DS.attr(),
     notes: DS.attr(),
     price: DS.attr(),
-    answers: DS.hasMany('answer', {async: true })
+    answers: DS.hasMany('answer', {async: true }),
+
+    // favList: Ember.inject.service(),
+    // onList: Ember.computed('favList.items.[]', function(){
+    //   return this.get('favList').includes(this);
+    // })
 });
