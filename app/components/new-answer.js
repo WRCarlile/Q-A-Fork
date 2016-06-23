@@ -12,6 +12,7 @@ export default Ember.Component.extend({
         author2: this.get('author2') ? this.get('author2') : "",
         reply: this.get('reply') ? this.get('reply') : "",
         question: this.get('question'),
+        thumbCount: 0,
       };
       this.set('addNewAnswer', false);
       this.sendAction('saveAnswer', params);
